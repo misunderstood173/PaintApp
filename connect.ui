@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Connect</class>
+ <widget class="QDialog" name="Connect">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>211</width>
+    <height>129</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Connection Settings</string>
+  </property>
+  <property name="whatsThis">
+   <string/>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>191</width>
+     <height>109</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0" colspan="2">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelRemoteIP">
+        <property name="whatsThis">
+         <string comment="The IP of the remote computer you want to peer"/>
+        </property>
+        <property name="text">
+         <string>Remote IP</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="editRemoteIP">
+        <property name="whatsThis">
+         <string comment="IP Adress ( e.g. 127.0.0.1 )"/>
+        </property>
+        <property name="inputMethodHints">
+         <set>Qt::ImhNone</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="editPort">
+        <property name="whatsThis">
+         <string comment="Sending Port ( e.g. 1234 )"/>
+        </property>
+        <property name="inputMethodHints">
+         <set>Qt::ImhNone</set>
+        </property>
+        <property name="text">
+         <string>1234</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelPort">
+        <property name="whatsThis">
+         <string comment="The Port used for sending data" extracomment="Must be different from Receiving Port"/>
+        </property>
+        <property name="text">
+         <string>Port</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="btnCancel">
+      <property name="whatsThis">
+       <string comment="Closes the dialog"/>
+      </property>
+      <property name="text">
+       <string>Cancel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="btnConnect">
+      <property name="whatsThis">
+       <string comment="Connect to remote computer"/>
+      </property>
+      <property name="text">
+       <string>Connect</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>editRemoteIP</tabstop>
+  <tabstop>editPort</tabstop>
+  <tabstop>btnConnect</tabstop>
+  <tabstop>btnCancel</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>Connect</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnConnect</sender>
+   <signal>clicked()</signal>
+   <receiver>Connect</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>54</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>36</x>
+     <y>124</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/Icons">
+        <file>Icons/Line Tool.png</file>
+        <file>Icons/Ellipse Tool.png</file>
+        <file>Icons/Eraser Tool.png</file>
+        <file>Icons/Pencil Tool.png</file>
+        <file>Icons/Rectangle Tool.png</file>
+        <file>Icons/Bucket Tool.png</file>
+        <file>Icons/Bezier Tool.png</file>
+    </qresource>
+</RCC>
